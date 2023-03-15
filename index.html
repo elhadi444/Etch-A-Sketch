@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Teko:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Etch A Sketch</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">Etch A Sketch</h1>
+        <div class="content">
+            <div class="board"></div>
+            <div class="slider">
+                <input type="range" min="16" max="64" value="32" class="slider" id="slider"
+                    onchange="changeSize(value)">
+            </div>
+            <div class="buttons">
+                <button class="reset" onclick="resetBoard()">reset</button>
+                <button class="eraser" onclick="changeColor('white')">eraser</button>
+                <button class="black" onclick="changeColor('black')">black</button>
+                <button class="random" onclick="changeColor('random')">random</button>
+                <input class="color-picker" type="color" id="favcolor" name="favcolor" value="#000"
+                    onchange="changeColor(value)">
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
